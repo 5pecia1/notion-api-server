@@ -2,6 +2,7 @@ PYTHON := python3
 PIP := pip3
 
 venv:
+	@echo "virtualenv can be installed by: pip3 install virtualenv"
 	rm -rf venv
 	virtualenv -p $(PYTHON) venv
 	source venv/bin/activate;\

@@ -1,4 +1,6 @@
-from flask import Flask
+from flask import (
+    Flask, request
+)
 
 app = Flask(__name__)
 
@@ -22,6 +24,9 @@ def health_check():
 #     "headers": {
 #     },
 # }
-@app.route('/database')
-def health_check():
+@app.route('/database', methods={"POST"})
+def database():
+    db_url = request.values.get("database", type=str)
+    fields = request.values.get("fields", default={}, type=dict)
+
     return "good"

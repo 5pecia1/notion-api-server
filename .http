@@ -1,0 +1,22 @@
+### TEST
+POST http://localhost:5000/database
+content-type: application/json
+
+{
+    "database": "https://www.notion.so/948a952b457142fba3a0bf8aa07ebdf6?v=d74960a860ce49ebb12fe79b742cdebc",
+    "fields": {
+        "status": "Not started",
+        "name": "ssss23"
+    }
+}
+
+### TODO
+POST http://localhost:5000/database
+content-type: application/json
+
+{
+    "database": "https://www.notion.so/3e5fa45b1ced42de9344441cbe033079?v=cf8b57ec9a254072b6f4cfb43b06815c",
+    "fields": {
+        "name": "api test"
+    }
+}

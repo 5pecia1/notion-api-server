@@ -1,17 +1,18 @@
 import os
+from typing import Dict
+from .notion import client
 
-from dotenv import load_dotenv
-from notion.client import NotionClient
+Fields = Dict[str, any]
 
-load_dotenv()
+def add_block(db_url: str, fields: Fields) -> bool:
+    cv = client.get_collection_view(db_url)
+    #TODO: https://github.com/jamalex/notion-py/issues/132
+    row = cv.collection.add_row()
 
-# Obtain the `token_v2` value by inspecting your browser cookies on a logged-in (non-guest) session on Notion.so
-client = NotionClient(token_v2=os.getenv("NOTION_TOKEN"))
+    row.title = fields['name']
+    del fields["name"]
 
-# Replace this URL with the URL of the page you want to edit
-page = client.get_block(os.getenv("NOTION_DEFAULT_BLOCK"))
+    for k, v in fields.items():
+        setattr(row, k, v)
 
-print("The old title is:", page)
-
-# Note: You can use Markdown! We convert on-the-fly to Notion's internal formatted text data structure.
-page.title = "The title has now changed, and has *live-updated* in the browser!"
+    return True

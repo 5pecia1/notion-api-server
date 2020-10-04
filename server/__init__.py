@@ -1,6 +1,7 @@
 from flask import (
     Flask, request
 )
+from notion_app import add_block
 
 app = Flask(__name__)
 
@@ -26,7 +27,14 @@ def health_check():
 # }
 @app.route('/database', methods={"POST"})
 def database():
-    db_url = request.values.get("database", type=str)
-    fields = request.values.get("fields", default={}, type=dict)
+    content = request.json
+    db_url = content["database"]
+    fields = content["fields"]
 
-    return "good"
+    result = add_block(db_url, fields)
+
+    if result:
+        return "good"
+    else:
+        return "bad", 400
+

@@ -12,3 +12,12 @@ venv:
 		$(PIP) install -r requirements.txt;
 	@echo "Active the virtual env: source venv/bin/activate"
 	@echo "Deactive when done: deactivate"
+
+docker:
+	@docker build -f ./Dockerfile -t notion-api-server:latest .
+
+docker-up:
+	@docker-compose up -d
+
+docker-down:
+	@docker-compose down -v

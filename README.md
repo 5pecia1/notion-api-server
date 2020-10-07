@@ -2,11 +2,16 @@
 
 ## Usage
 
+### Configure
+
 ```sh
+$ git clone https://github.com/5pecia1/notion-api-server.git
+$ cd notion-api-server
 $ python3 -m venv venv
 $ source venv/bin/activate
 $ pip install -r requirements.txt
 
+## exit virtual environment
 $ deactivate
 ```
 

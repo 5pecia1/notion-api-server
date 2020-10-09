@@ -2,17 +2,53 @@
 
 ## Usage
 
-### Configure
+### Quick Start
+
+```sh
+$ NOTION_TOKEN=xxxx
+$ docker run --restart always -e NOTION_TOKEN=${NOTION_TOKEN} -p 5000:5000 --name notion notion-api-server:latest
+```
+
+### Develop
+
+#### Prerequisites
+
+* make
+* Docker
+* Docker Compose
+* python 3.8.x
+* pip 3
+* virtualenv
+    * `pip install virtualenv`
+
+#### Configure
 
 ```sh
 $ git clone https://github.com/5pecia1/notion-api-server.git
 $ cd notion-api-server
-$ python3 -m venv venv
+$ make init-venv
 $ source venv/bin/activate
-$ pip install -r requirements.txt
 
 ## exit virtual environment
 $ deactivate
+```
+
+#### Running
+
+```sh
+$ make run
+```
+
+#### Docker Build
+
+```sh
+$ make docker-build
+```
+
+#### Docker Running
+
+```sh
+$ make docker-up
 ```
 
 ## CAUTION

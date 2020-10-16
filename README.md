@@ -2,7 +2,7 @@
 
 Notion API Server that can use various APIs in connection with Notion.
 
-## Feature
+## TODO
 
 - [x] add item with property in database
 - [ ] add item with context in database

@@ -78,7 +78,7 @@ $ make docker-build
 $ make docker-up
 ```
 
-## CAUTION
+#### CAUTION for developer
 
 * https://github.com/jamalex/notion-py/issues/132  
 * `git clone https://github.com/jamalex/notion-py.git && mv notion-py/notion . && rm -rf notion-py`

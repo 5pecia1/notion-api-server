@@ -6,7 +6,7 @@
 
 ```sh
 $ NOTION_TOKEN=xxxx
-$ docker run --restart always -e NOTION_TOKEN=${NOTION_TOKEN} -p 5000:5000 --name notion notion-api-server:latest
+$ docker run --restart always -e NOTION_TOKEN=${NOTION_TOKEN} -p 5000:5000 --name notion 5pecia1/notion-api-server:latest
 ```
 
 ### Develop

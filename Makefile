@@ -1,5 +1,5 @@
 DOCKER_VERSION := latest
-DOCKER_IMAGE := notion-api-server
+DOCKER_IMAGE := 5pecia1/notion-api-server
 
 PYTHON := python3
 PIP := pip3

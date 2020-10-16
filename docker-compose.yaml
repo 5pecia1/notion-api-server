@@ -2,9 +2,9 @@ version: "3"
 
 services:
   docker-api-server:
-    container_name: notion
+    image: 5pecia1/notion-api-server:latest
+    container_name: notion-api-server
     restart: always
-    image: notion-api-server:latest
     environment: 
       - NOTION_TOKEN=${NOTION_TOKEN}
     ports:

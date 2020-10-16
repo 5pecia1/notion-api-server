@@ -26,7 +26,7 @@ $ curl --location --request GET 'http://localhost:5000/database' \
 }' 
 ```
 
-API Reference: [.http](./http)
+API Reference: [.http](./.http)
 
 #### JSON Body
 

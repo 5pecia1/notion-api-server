@@ -1,5 +1,7 @@
 # Notin API Server
 
+Notion API Server that can use various APIs in connection with Notion.
+
 ## Feature
 
 - [x] add item with property in database

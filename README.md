@@ -1,5 +1,13 @@
 # Notin API Server
 
+Notion API Server that can use various APIs in connection with Notion.
+
+## Feature
+
+- [x] add item with property in database
+- [ ] add item with context in database
+- [ ] update item
+
 ## Usage
 
 ### Quick Start
@@ -7,7 +15,26 @@
 ```sh
 $ NOTION_TOKEN=xxxx
 $ docker run --restart always -e NOTION_TOKEN=${NOTION_TOKEN} -p 5000:5000 --name notion 5pecia1/notion-api-server:latest
+$ curl --location --request GET 'http://localhost:5000/database' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "database": "https://www.notion.so/3e5fa45b1ced42de9344441cbe033079?v=cf8b57ec9a254072b6f4cfb43b06815c",
+    "fields": {
+        "status": "Not started",
+        "name": "api test"
+    }
+}' 
 ```
+
+API Reference: [.http](./.http)
+
+#### JSON Body
+
+* `database`: notion database url
+* `fields`: notion database item(page) properties.  
+    You can add any notion property by JSON key, value
+    * `name`: notion database item(page) title
+
 
 ### Develop
 

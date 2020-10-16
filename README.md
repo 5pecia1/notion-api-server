@@ -1,5 +1,11 @@
 # Notin API Server
 
+## Feature
+
+- [x] add item with property in database
+- [ ] add item with context in database
+- [ ] update item
+
 ## Usage
 
 ### Quick Start

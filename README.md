@@ -1,6 +1,6 @@
 # Notin API Server
 
-Notion API Server that can use various APIs in connection with Notion.
+It's an API server that can control Notoin's API using REST.
 
 ## TODO
 

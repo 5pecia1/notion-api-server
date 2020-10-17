@@ -1,4 +1,4 @@
-# Notin API Server
+# Notion API Server
 
 It's an API server that can control Notoin's API using REST.
 

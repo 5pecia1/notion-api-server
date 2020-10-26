@@ -30,10 +30,11 @@ API Reference: [.http](./.http)
 
 #### JSON Body
 
-* `database`: notion database url
-* `fields`: notion database item(page) properties.  
+* `database`: (string) notion database url
+* `fields`: (JSON)notion database item(page) properties.  
     You can add any notion property by JSON key, value
     * `name`: notion database item(page) title
+* `content`: (string) notion database item(page) content.  
 
 
 ### Develop

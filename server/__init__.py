@@ -30,8 +30,9 @@ def database():
     content = request.json
     db_url = content["database"]
     fields = content["fields"]
+    content = content["content"]
 
-    result = add_block(db_url, fields)
+    result = add_block(db_url, fields, content)
 
     if result:
         return "good"

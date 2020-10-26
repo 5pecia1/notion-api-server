@@ -6,8 +6,9 @@ content-type: application/json
     "database": "https://www.notion.so/948a952b457142fba3a0bf8aa07ebdf6?v=d74960a860ce49ebb12fe79b742cdebc",
     "fields": {
         "status": "Not started",
-        "name": "ssss23"
-    }
+        "name": "api test3"
+    },
+    "content": "test line1\ntest line2"
 }
 
 ### TODO

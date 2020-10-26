@@ -5,7 +5,7 @@ It's an API server that can control Notoin's API using REST.
 ## TODO
 
 - [x] add item with property in database
-- [ ] add item with context in database
+- [x] add item with content in database
 - [ ] update item
 
 ## Usage
@@ -30,10 +30,11 @@ API Reference: [.http](./.http)
 
 #### JSON Body
 
-* `database`: notion database url
-* `fields`: notion database item(page) properties.  
+* `database`: (string) notion database url
+* `fields`: (JSON)notion database item(page) properties.  
     You can add any notion property by JSON key, value
     * `name`: notion database item(page) title
+* `content`: (string) notion database item(page) content.  
 
 
 ### Develop

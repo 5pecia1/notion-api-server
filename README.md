@@ -5,7 +5,7 @@ It's an API server that can control Notoin's API using REST.
 ## TODO
 
 - [x] add item with property in database
-- [ ] add item with context in database
+- [x] add item with content in database
 - [ ] update item
 
 ## Usage

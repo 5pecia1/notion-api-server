@@ -6,7 +6,10 @@ It's an API server that can control Notoin's API using REST.
 
 - [x] add item with property in database
 - [x] add item with content in database
+- [ ] add multi page context itme in database
 - [ ] update item
+- [ ] real RESTful
+- [ ] notion key in Authorization in http header
 
 ## Usage
 

@@ -5,15 +5,16 @@ from .block import TextBlock
 
 Fields = Dict[str, any]
 
-def add_block(db_url: str, fields: Fields, content: any = None) -> bool:
+def add_block(db_url: str, title: str = None, fields: Fields = None, content: any = None) -> bool:
     cv = client.get_collection_view(db_url)
     row = cv.collection.add_row()
 
-    row.title = fields['name']
-    del fields["name"]
+    if title != None:
+        row.title = title
 
-    for k, v in fields.items():
-        setattr(row, k, v)
+    if fields != None:
+        for k, v in fields.items():
+            setattr(row, k, v)
 
     if content != None: 
         # TODO: parse description
@@ -22,3 +23,9 @@ def add_block(db_url: str, fields: Fields, content: any = None) -> bool:
         newchild.checked = True
 
     return True
+
+def query_block():
+    pass
+
+def update_block():
+    pass

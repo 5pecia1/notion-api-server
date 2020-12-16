@@ -21,3 +21,15 @@ content-type: application/json
         "name": "api test"
     }
 }
+
+### 
+POST http://localhost:5000/database
+content-type: application/json
+
+{
+    "database": "https://www.notion.so/5pecia1/7fa06a4ba9f84a60aef15a7ddb23bbb7?v=e37ffca4e18341c0870f77ab78496296",
+    "fields": {
+        "Type": "회고",
+        "Date": "Sep 26, 2020"
+    }
+}

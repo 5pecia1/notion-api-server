@@ -30,11 +30,12 @@ def database():
     content = request.json
     db_url = content["database"]
     
-    title = content["title"] if "title" in content else None
     fields = content["fields"] if "fields" in content else None
-    content = content["content"] if "content" in content else None
+    cont = content["content"] if "content" in content else None
+    query = content["query"] if "query" in content else None
+    update = content["update"] if "update" in content else None
 
-    result = add_block(db_url, title, fields, content)
+    result = add_block(db_url, fields, cont, query, update)
 
     if result:
         return "good"

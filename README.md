@@ -26,7 +26,8 @@ $ curl --location --request GET 'http://localhost:5000/database' \
         "status": "Not started",
         "name": "api test"
     },
-    "content": "test line1\ntest line2"
+    "content": "test line1\ntest line2",
+    "key": ""
 }' 
 ```
 

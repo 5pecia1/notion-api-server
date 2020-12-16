@@ -7,9 +7,10 @@ Fields = Dict[str, any]
 
 def add_block(db_url: str, fields: Fields, content: any = None, query: any = None, update: any = None) -> bool:
     cv = client.get_collection_view(db_url)
+    queried = []
+
     if query is not None:
         dbs = cv.default_query().execute()
-        queried = []
         for r in dbs:
             if is_contain(query, r):
                 queried.append(r)
@@ -18,9 +19,10 @@ def add_block(db_url: str, fields: Fields, content: any = None, query: any = Non
                 for u in update:
                     setattr(q, u, update[u])
         else:
+            # TODO: return queried result
             print(queried)
         
-    else:
+    if queried is []:
         row = cv.collection.add_row()
 
         for k, v in fields.items():

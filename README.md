@@ -28,6 +28,17 @@ $ curl --location --request GET 'http://localhost:5000/database' \
     },
     "content": "test line1\ntest line2"
 }' 
+$ curl --location --request GET 'http://localhost:5000/database' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "database": "https://www.notion.so/3e5fa45b1ced42de9344441cbe033079?v=cf8b57ec9a254072b6f4cfb43b06815c",
+    "query": {
+        "Status": "Not started"
+    },
+    "update": {
+        "Status": "In progress"
+    } 
+}' 
 ```
 
 API Reference: [.http](./.http)

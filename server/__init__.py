@@ -29,10 +29,13 @@ def health_check():
 def database():
     content = request.json
     db_url = content["database"]
-    fields = content["fields"]
-    content = content["content"]
+    
+    fields = content["fields"] if "fields" in content else None
+    cont = content["content"] if "content" in content else None
+    query = content["query"] if "query" in content else None
+    update = content["update"] if "update" in content else None
 
-    result = add_block(db_url, fields, content)
+    result = add_block(db_url, fields, cont, query, update)
 
     if result:
         return "good"

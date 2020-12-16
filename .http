@@ -21,3 +21,20 @@ content-type: application/json
         "name": "api test"
     }
 }
+
+### query
+POST http://localhost:5000/database
+content-type: application/json
+
+{
+    "database": "https://www.notion.so/5pecia1/948a952b457142fba3a0bf8aa07ebdf6?v=d74960a860ce49ebb12fe79b742cdebc",
+    "fields": {
+        "name": "api test"
+    },
+    "query": {
+        "Status": "Not started"
+    },
+    "update": {
+        "Check": true
+    } 
+}

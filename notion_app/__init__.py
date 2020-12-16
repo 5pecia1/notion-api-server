@@ -22,7 +22,7 @@ def add_block(db_url: str, fields: Fields, content: any = None, query: any = Non
             # TODO: return queried result
             print(queried)
         
-    if queried is []:
+    if not queried:
         row = cv.collection.add_row()
 
         for k, v in fields.items():

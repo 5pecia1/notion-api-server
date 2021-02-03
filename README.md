@@ -18,7 +18,7 @@ It's an API server that can control Notoin's API using REST.
 ```sh
 $ NOTION_TOKEN=xxxx
 $ docker run --restart always -e NOTION_TOKEN=${NOTION_TOKEN} -p 5000:5000 --name notion 5pecia1/notion-api-server:latest
-$ curl --location --request GET 'http://localhost:5000/database' \
+$ curl --location --request POST 'http://localhost:5000/database' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "database": "https://www.notion.so/3e5fa45b1ced42de9344441cbe033079?v=cf8b57ec9a254072b6f4cfb43b06815c",
@@ -28,7 +28,7 @@ $ curl --location --request GET 'http://localhost:5000/database' \
     },
     "content": "test line1\ntest line2"
 }' 
-$ curl --location --request GET 'http://localhost:5000/database' \
+$ curl --location --request POST 'http://localhost:5000/database' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "database": "https://www.notion.so/3e5fa45b1ced42de9344441cbe033079?v=cf8b57ec9a254072b6f4cfb43b06815c",
